@@ -1,21 +1,16 @@
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 5; index++) {
         basic.showIcon(IconNames.SmallHeart)
-        music.ringTone(131)
+        music.ringTone(262)
         basic.pause(70)
         music.rest(music.beat(BeatFraction.Whole))
         basic.pause(t1)
         basic.showIcon(IconNames.Heart)
-        music.ringTone(131)
+        music.ringTone(262)
         basic.pause(100)
         music.rest(music.beat(BeatFraction.Whole))
         basic.pause(t2)
     }
-})
-input.onGesture(Gesture.Shake, function () {
-    t0 = 0
-    t1 = 20
-    t2 = 200
 })
 /**
  * Oppgave 4
@@ -48,6 +43,11 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     basic.showNumber(t2)
     t2 = t2 / 1.5
+})
+input.onGesture(Gesture.Shake, function () {
+    t0 = 0
+    t1 = 20
+    t2 = 200
 })
 let t2 = 0
 let t1 = 0
